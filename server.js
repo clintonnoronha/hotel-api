@@ -9,7 +9,7 @@ const userRouter = require("./routes/user");
 const app = express();
 
 const PORT = process.env.PORT;
-const MONGO_URL = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_USER_SECRET}@cluster0.bxlea0m.mongodb.net/?retryWrites=true&w=majority`;
+const MONGO_URL = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_USER_SECRET}@cluster0.bxlea0m.mongodb.net/${process.env.MONGO_DB}?retryWrites=true&w=majority`;
 
 mongoose.connect(MONGO_URL).then(() => {
   console.log("Connected to MongoDB...");
